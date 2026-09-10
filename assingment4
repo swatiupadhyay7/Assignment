@@ -1,0 +1,53 @@
+#1...
+import numpy as np
+
+likes = np.array([120, 250, 180, 320, 150, 400, 275])
+comments = np.array([20, 35, 25, 40, 15, 50, 30])
+engagement = likes + comments
+average_engagement = engagement / 2
+print("Average Engagement per Post:")
+print(average_engagement)
+
+#2...
+
+prices = np.array([200, 350, 150, 500, 250])
+discounts = np.array([20, 50, 15, 100, 25])
+
+final_price = prices - discounts
+
+print("Final Prices:", final_price)
+
+#3...
+import numpy as np
+
+scores = np.array([175, 190, 210, 165, 185])
+
+result = scores > 180
+
+print("Scores:", scores)
+print("Scores greater than 180:", result)
+
+#4...
+
+import numpy as np
+
+paytm = np.array([1, 0, 1, 0, 1, 0])
+phonepe = np.array([0, 1, 1, 0, 0, 1])
+
+result = np.logical_or(paytm, phonepe)
+
+print("Paid by either Paytm or PhonePe:")
+print(result)
+
+#5...
+
+import numpy as np
+
+steps = np.array([5000, 6000, 4500, 7000, 8000, 5500, 6500])
+
+steps_with_bonus = steps + 500
+
+total_steps = np.sum(steps_with_bonus)
+
+print("Steps with bonus:", steps_with_bonus)
+print("Total steps for the week:", total_steps)
