@@ -1,0 +1,81 @@
+#1...
+
+import numpy as np
+
+likes = np.array([111, 220, 188, 300, 190, 700, 275])
+
+print("Likes:", likes)
+print("ndim:", likes.ndim)
+print("shape:", likes.shape)
+print("size:", likes.size)
+print("dtype:", likes.dtype)
+print("itemsize:", likes.itemsize)
+print("nbytes:", likes.nbytes)
+
+#2...
+
+
+
+steps = np.array([
+    [3000, 5000],
+    [4000, 6000],
+    [3500, 5500],
+    [4500, 6500],
+    [5000, 7000]
+])
+
+print("Original:", steps)
+print("Shape:", steps.shape)
+
+steps_1d = steps.reshape(10)
+print("1D:", steps_1d)
+print("Shape:", steps_1d.shape)
+
+steps_2d = steps_1d.reshape(5, 2)
+print("2D:", steps_2d)
+print("Shape:", steps_2d.shape)
+
+#3...
+
+
+prices = np.array([120, 250, 180, 90, 150, 200, 75, 300, 110, 160, 220, 130])
+ravel_prices = prices.ravel()
+flatten_prices = prices.flatten()
+prices.resize(3, 4)
+
+
+print("ravel():", ravel_prices)
+print("Original:", prices)
+print("flatten():", flatten_prices)
+print("resize():")
+print(prices)
+
+
+#4....
+
+
+playlist = np.array([
+    [10, 5, 8],
+    [7, 12, 6],
+    [9, 4, 11]
+])
+
+print("Using T:")
+print(playlist.T)
+
+print("Using np.transpose():")
+print(np.transpose(playlist))
+
+#5...
+
+
+ratings = np.array([5, 4, 3, 5, 4, 2, 5, 4, 3, 5, 4, 3, 5, 4, 2])
+
+
+ratings_2d = ratings.reshape(3, 5)
+print("3x5 Array:")
+print(ratings_2d)
+
+ratings_1d = ratings_2d.flatten()
+print("1D Array:")
+print(ratings_1d)
