@@ -1,1 +1,34 @@
+import numpy as np
 
+# 1...
+
+
+my_scores = np.array([4, 5, 3, 4, 5])
+print("Zomato Ratings:", my_scores)
+
+# 2...
+
+
+even_numbers = np.arange(10, 31, 2)
+print("Even Numbers:", even_numbers)
+
+# 3...
+
+
+volume_slider = np.linspace(0, 1, 8)
+print("Volume Slider:", volume_slider)
+
+# 4...
+
+
+cart = np.zeros(10)
+cart[2] = 1
+cart[6] = 1
+print("Cart:", cart)
+
+# 5...
+
+
+np.random.seed(42)
+otp_codes = np.random.randint(1000, 10000, 6)
+print("OTP Codes:", otp_codes)
