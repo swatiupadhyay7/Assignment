@@ -1,0 +1,43 @@
+#1
+import numpy as np
+
+teams = np.array([
+    "CSK", "MI", "RCB", "CSK", "KKR",
+    "MI", "SRH", "RCB", "DC", "KKR"
+])
+
+unique_teams = np.unique(teams)
+print(unique_teams)
+
+
+#2
+
+ratings = np.array([4.5, 3.8, np.nan, 4.2, np.nan, 5.0, 3.5, np.nan])
+missing_ratings = np.isnan(ratings)
+
+print("Missing ratings:", np.sum(missing_ratings))
+
+
+#3
+
+prices = np.array([50, 250, 500, 1200, 800, 1500, 100])
+clipped_prices = np.clip(prices, 100, 1000)
+
+print(clipped_prices)
+
+#4
+import numpy as np
+
+views = np.array([1000, np.nan, 5000, np.inf, 7500])
+
+views[np.isnan(views)] = 0
+views[np.isinf(views)] = 7500
+
+print(views)
+
+
+
+#5
+numbers = np.array([11, 24, 35, 42, 57, 68, 73, 80])
+even_indices = np.where(numbers % 2 == 0)
+print(even_indices[0])
