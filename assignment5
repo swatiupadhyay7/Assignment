@@ -1,0 +1,63 @@
+#1
+
+import numpy as np
+my_likes = np.array([120, 150, 180, 200, 175, 220, 250])
+friend_likes = np.array([100, 160, 170, 190, 210, 200, 230])
+combined = np.add(my_likes, friend_likes)
+difference = np.subtract(my_likes, friend_likes)
+
+print(combined)
+print(difference)
+
+
+#2
+
+prices = np.array([150, 220, 180, 250, 100])
+discounted_prices = np.multiply(prices, 0.9)
+final_bill = np.sum(discounted_prices)
+
+print(discounted_prices)
+print(final_bill)
+
+
+#3
+
+
+steps = np.array([
+    6500, 7200, 8100, 5900, 9000,
+    7500, 6800, 8200, 7000, 9500,
+    6100, 7300, 8800, 7900, 8400,
+    6700, 7600, 9200, 7100, 8000,
+    6900, 8700, 7400, 9600, 7800,
+    8500, 6300, 8100, 9000, 7300
+])
+
+print(np.mean(steps))
+print(np.median(steps))
+print(np.std(steps))
+print(np.max(steps))
+
+
+
+#4
+
+
+ratings = np.random.uniform(1, 6, 12)
+print(ratings)
+print(np.round(ratings))
+print(np.floor(ratings))
+print(np.ceil(ratings))
+
+
+
+
+#5
+
+skips = np.array([1, 0, 0, 1, 0, 1, 0, 0, 1, 1,
+                  0, 0, 1, 0, 1, 0, 0, 1, 0, 0])
+
+percentage_skipped = np.mean(skips) * 100
+percentile_75 = np.percentile(skips, 75)
+
+print("Percentage of songs skipped:", percentage_skipped, "%")
+print("75th percentile of skips:", percentile_75)
